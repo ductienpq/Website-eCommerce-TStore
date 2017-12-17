@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JE Supersized Fullsceen Gallery</name> 
+    <version>3.4</version>
+    <creationDate>February, 2015</creationDate>
+    <author>jExtensions.com</author>
+    <authorEmail>support@jExtensions.com</authorEmail>
+    <authorUrl>http://jExtensions.com</authorUrl>
+    <copyright>Copyright 2015 - jExtensions.com</copyright>
+    <license>GNU/GPL</license>
+	<description><![CDATA[
+	<h1 class="sub-heading">JE Supersized Fullsceen Gallery</h1>	
+	<div class="description">Download more free extensions from <a href="http://jextensions.com/" target="_blank">jExtensions.com</a><br/>
+	Need help? <a href="http://jextensions.com/fullscreen-image-gallery-joomla-2.5/" target="_blank">Click here to visit the support page</a>.<br/>
+	<span class="credits">Credits: <a href="http://buildinternet.com/project/supersized" target="_blank" >Supersized</a></span>
+	</div>
+		]]>
+	</description>
+	
+	<files>
+		<filename module="mod_je_fullscreengallery">mod_je_fullscreengallery.php</filename>
+		<filename>index.html</filename>
+		<filename>thumb.php</filename>
+		<folder>css</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>php</folder>
+	</files>
+
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_je_fullscreengallery/php">
+		<fieldset name="basic">
+				<field name="jQuery" type="list" default="0" label="jQuery" description="Enable or Disable the latest jQuery version. Make sure that jQuery is loaded only once on your website.">
+					<option value="0">Disable</option>
+					<option	value="1">Enable</option>
+				</field>
+
+			<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Choose Slideshow Images&lt;/div&gt;" />
+
+			<field type="spacer" name="&lt;div class=&quot;description&quot;&gt;Choose &quot;Individual&quot; if you would like to set up each slide separately using the &quot;Manage Slides&quot; tab. Choose &quot;Folder&quot; if you want to load the slide images from the selected folder.&lt;/div&gt;" />
+
+			<field name="SelectImage" type="list" default="file" label="Select Images" description="Load the images from a folder or set up each slide separately.">
+				<option value="file">Individual</option>
+				<option value="folder">From Folder</option>
+			</field>
+			<field name="imageFolder" type="folderlist" directory="/images" filter="" exclude="" hide_none="0" hide_default="1" label="Select Folder" description="Please choose the folder where the images are located." />
+						
+			<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slideshow Config&lt;/div&gt;" />
+			
+				<field name="thumbNav" type="list" default="0" label="Thumb Navigation" description="">
+					<option value="0">Disable</option>
+					<option	value="1">Enable</option>
+				</field>
+				
+				<field name="arrowNav" type="list" default="1" label="Arrow Navigation" description="">
+					<option value="0">Disable</option>
+					<option	value="1">Enable</option>
+				</field>
+				
+				<field name="progressBar" type="list" default="0" label="Progress Bar" description="">
+					<option value="0">Disable</option>
+					<option	value="1">Enable</option>
+				</field>
+				
+				<field name="ctrlBar" type="list" default="0" label="Controls Bar" description="">
+					<option value="0">Disable</option>
+					<option	value="1">Enable</option>
+				</field>								
+
+			
+			<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Thumbs Config&lt;/div&gt;" />
+
+			<field name="thumbWidth" type="text" default="200" label="Thumb Width" description="Width of images are in pixels." />
+			<field name="thumbHeight" type="text" default="150" label="Thumb Height" description="Height of images are in pixels." />
+			<field name="thumbQuality" type="list" default="100" label="Thumb Quality" description="Quality of the croped thumbnail image.">
+				<option value="100">100%</option>
+				<option value="90">90%</option>
+				<option value="80">80%</option>
+				<option value="70">70%</option>
+				<option value="60">60%</option>
+				<option value="50">50%</option>
+				<option value="40">40%</option>
+				<option value="30">30%</option>
+				<option value="20">20%</option>
+				<option value="10">10%</option>
+			</field>	
+			<field name="thumbAlign" type="list" default="true" label="Thumb Alignment" description="Choose the cropped image alignment.">
+				<option value="t">Top</option>
+				<option value="b">Bottom</option>
+				<option value="l">Left</option>
+				<option value="r">Right</option>
+			</field>
+			
+			
+		<field type="asset" />	
+		</fieldset>
+		
+		<fieldset name="slides" label="&gt;&gt;&gt; Manage Slides &lt;&lt;&lt;">	
+		<!-- SLIDE 1 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #1&lt;/div&gt;" />
+		<field name="Image1" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text1" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 2 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #2&lt;/div&gt;" />
+		<field name="Image2" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text2" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 3 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #3&lt;/div&gt;" />
+		<field name="Image3" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text3" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 4 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #4&lt;/div&gt;" />
+		<field name="Image4" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text4" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 5 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #5&lt;/div&gt;" />
+		<field name="Image5" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text5" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 6 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #6&lt;/div&gt;" />
+		<field name="Image6" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text6" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 7 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #7&lt;/div&gt;" />
+		<field name="Image7" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text7" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 8 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #8&lt;/div&gt;" />
+		<field name="Image8" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text8" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 9 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #9&lt;/div&gt;" />
+		<field name="Image9" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text9" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 10 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #10&lt;/div&gt;" />
+		<field name="Image10" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text10" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 11 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #11&lt;/div&gt;" />
+		<field name="Image11" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text11" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 12 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #12&lt;/div&gt;" />
+		<field name="Image12" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text12" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 13 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #13&lt;/div&gt;" />
+		<field name="Image13" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text13" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 14 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #14&lt;/div&gt;" />
+		<field name="Image14" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text14" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 15 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #15&lt;/div&gt;" />
+		<field name="Image15" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text15" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 16 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #16&lt;/div&gt;" />
+		<field name="Image16" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text16" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 17 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #17&lt;/div&gt;" />
+		<field name="Image17" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text17" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 18 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #18&lt;/div&gt;" />
+		<field name="Image18" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text18" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 19 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #19&lt;/div&gt;" />
+		<field name="Image19" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text19" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+
+		<!-- SLIDE 20 -->
+		<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide #20&lt;/div&gt;" />
+		<field name="Image20" label="Slide Image" type="media"  description="Choose an image." />
+		<field name="Text20" label="Slide Text" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="Add slide text here. HTML allowed." />
+		
+		</fieldset>					
+	</fields>
+	</config>
+</extension>

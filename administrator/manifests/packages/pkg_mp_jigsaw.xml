@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+    <name>Jigsaw Puzzle Package</name>
+    <author>Thomas Seidel</author>
+    <creationDate>December 2012</creationDate>
+    <packagename>mp_jigsaw</packagename>
+    <version>2.0.0</version>
+    <url>http://mypuzzle.org/</url>
+    <packager>mypuzzle.org</packager>
+    <packagerurl>http://mypuzzle.org/</packagerurl>
+    <description>Mypuzzle Jigsaw Extension - Add Jigsaw Puzzles to your website</description>
+    <update>http://blog.mypuzzle.org/downloads/joomla/mp_jigsaw.zip</update>
+    <files folder="packages">
+        <file type="component" id="com_mp_jigsaw" >com_mp_jigsaw.zip</file>
+        <file type="module" id="mod_mp_jigsaw" client="site">mod_mp_jigsaw.zip</file>
+    </files>
+</extension>

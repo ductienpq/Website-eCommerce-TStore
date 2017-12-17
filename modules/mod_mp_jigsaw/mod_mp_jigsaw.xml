@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site">
+	<name>MyPuzzle Jigsaw Puzzle</name>
+	<author>Mypuzzle.org</author>
+	<creationDate>2012 September 02</creationDate>
+	<copyright>Copyright (C) 2012. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tom@mypuzzle.org</authorEmail>
+	<authorUrl>www.mypuzzle.org</authorUrl>
+	<version>2.0.0</version>
+	<description>Bring MyPuzzle Jigsaw Puzzles to your joomla website.</description>
+	<files>
+            <filename module="mod_mp_jigsaw">mod_mp_jigsaw.php</filename>
+            <filename>css/index.html</filename>
+            <filename>css/jigsaw-plugin.css</filename>
+            <filename>index.html</filename>
+            <filename>jigsaw-plugin.php</filename>
+            <filename>jigsaw-plugin2.swf</filename>
+            <filename>js/index.html</filename>
+            <filename>js/jigsaw_plugin.js</filename>
+            <filename>js/jquery.bpopup-0.7.0.min.js</filename>
+            <filename>img/index.html</filename>
+            <filename>img/close_button.png</filename>
+            <filename>gallery/animals-bunny-2.jpg</filename>
+            <filename>gallery/animals-bunny.jpg</filename>
+            <filename>gallery/animals-cat-2.jpg</filename>
+            <filename>gallery/animals-cat.jpg</filename>
+            <filename>gallery/animals-dog-2.jpg</filename>
+            <filename>gallery/animals-dog.jpg</filename>
+            <filename>gallery/animals-horse-2.jpg</filename>
+            <filename>gallery/animals-horse.jpg</filename>
+            <filename>gallery/architecture-london-towerbridge.jpg</filename>
+            <filename>gallery/architecture-moscow-redsquare.jpg</filename>
+            <filename>gallery/architecture-nederlanden.jpg</filename>
+            <filename>gallery/architecture-newyork-publiclibrary.jpg</filename>
+            <filename>gallery/architecture-paris-eiffeltower.jpg</filename>
+            <filename>gallery/cities-tokyo-night.jpg</filename>
+            <filename>gallery/flowers-reddahlia.jpg</filename>
+            <filename>gallery/flowers-waterlillies.jpg</filename>
+            <filename>gallery/flowers-windclock.jpg</filename>
+            <filename>gallery/index.html</filename>
+            <filename>gallery/landscape-1.jpg</filename>
+            <filename>gallery/landscape-2.jpg</filename>
+            <filename>gallery/landscape-australia-outback.jpg</filename>
+            <filename>gallery/landscape-netherlands-deurningen.jpg</filename>
+            <filename>gallery/landscape-us-edgewood.JPG</filename>
+	</files>
+	<config>
+	  <fields name="params">
+	    <fieldset name="basic" label="Jigsaw Puzzle Parameters" description="MyPuzzle Jigsaw Settings">
+		    <field name="size" type="text" default="300" label="Puzzle Size in px">
+			</field>
+		    <field name="pieces" type="list" default="3" label="Pieces count">
+                            <option value="3">3x3 - 9 pieces</option>
+                            <option value="4">4x4 - 16 pieces</option>
+                            <option value="5">5x5 - 25 pieces</option>
+                            <option value="6">6x6 - 36 pieces</option>
+                            <option value="7">7x7 - 49 pieces</option>
+                            <option value="8">8x8 - 64 pieces</option>
+                            <option value="9">9x9 - 81 pieces</option>
+                            <option value="10">10x10 - 100 pieces</option>
+                    </field>
+                    <field name="rotation" type="checkbox" value="1" label="Enable Rotation"></field>
+                    <field name="preview" type="checkbox" value="1" label="Show Preview"></field>
+                    <field name="bgcolor" type="color" default="#FFFFFF" label="Background Color"></field>
+                    <field name="myimage" type="text" default="" size="60" label="Start image Path/Url">
+                    </field>
+                    <field name="gallery" type="text" default="modules/mod_mp_jigsaw/gallery" size="60" label="Image gallery Path">
+                    </field>
+                    <field name="doresize" type="checkbox" value="1" label="Resize Images"></field>
+                    <field name="resizefolder" type="text" default="images" size="60" label="Image resize folder">
+                    </field>
+	    </fieldset>
+	  </fields>
+	</config>
+</extension>

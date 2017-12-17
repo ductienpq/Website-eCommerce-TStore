@@ -1,0 +1,11 @@
+.JEtabs { width:100%; display:inline-block; margin:0 0 10px 0}
+.JEtabs .tab-links:after { display:block; clear:both;  content:''; }
+.JEtabs .tab-links { margin:0 0 0 10px; padding:0}
+.JEtabs .tab-links li { margin:0px 5px -1px 5px; float:left; list-style:none;  }
+.JEtabs .tab-links li a { padding:9px 15px; display:inline-block; font-size:16px; font-weight:600;transition:all linear 0.15s;
+-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0; }
+.JEtabs .tab-links li a:hover { text-decoration:none; }
+.JEtabs .tab-links li.active a,.JEtabs .tab-links li.active a:hover {}
+.JEtabs .tab-content { padding:15px; -webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.JEtabs .tab {display:none;}
+.JEtabs .tab.active { display:block; }
